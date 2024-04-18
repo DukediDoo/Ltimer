@@ -40,18 +40,13 @@ def timer():
 
                     
                     rmtimeprintf1 = print(f" A minute has passed, remaining time: {int(usrtoccalculated/60)} minutes {usrtoccalculated%60} seconds ") #bruh it cant print the global remainign_time bc it dont exist until time sleep happened cuz it dont exist until after 6 secs the change has been made and stored. LOL        else:
-                if usrtoccalculated == 59:
-                    PROJECT_DIR = Path(__file__).parent
-                    YEAHSFX = os.path.join(PROJECT_DIR, 'yeah!.mp3')
-                    try:
+                if usrtoccalculated == 0:
 
-                        v22 = playsound(YEAHSFX)
-                        audio_process = Process(target=v22)
-                        audio_process.start()
-                        webbrowser.open('https://www.youtube.com/watch?v=3dfLtQxc3BY') #Good job!
-                        print("BEEEP BEEP TIMER DONE\nWant to set a new timer? Press Any Button to continue\nContinue? \n")
-                    except Expection as e:
-                        print("error playing auduio: {e}")
+                    
+                    webbrowser.open('https://www.youtube.com/watch?v=3dfLtQxc3BY')
+                    webbrowser.open('https://www.youtube.com/watch?v=qjqhy73yTq0') #Good job!
+                    print("BEEEP BEEP TIMER DONE\nWant to set a new timer? Press Any Button to continue\nContinue? \n")
+                    
         else:
             print("Not a number or too high of one.\n")
 
